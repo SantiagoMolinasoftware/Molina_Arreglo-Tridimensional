@@ -31,4 +31,15 @@ int main()
             }
         }
     }
+
+    // Inicializar la última matriz en unos
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            for (int k = 0; k < profundidad; k++) {
+                if (i == filas - 1) {
+                    arreglo[i][j][k] = 1;
+                }
+            }
+        }
+    }
 }

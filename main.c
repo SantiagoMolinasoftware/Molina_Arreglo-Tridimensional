@@ -13,4 +13,22 @@ int main()
 
     printf("Ingrese la cantidad de dimension: ");
     scanf("%d", &profundidad);
+
+    // Verificar que los valores ingresados sean correctos
+    if (filas <= 0 || columnas <= 0 || profundidad <= 0) {
+        printf("Los valores deben ser mayores que cero.\n");
+        return 1;
+    }
+
+    // Declarar e inicializar el arreglo tridimensional
+    int arreglo[filas][columnas][profundidad];
+
+    // Inicializar todas las matrices del arreglo en ceros
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            for (int k = 0; k < profundidad; k++) {
+                arreglo[i][j][k] = 0;
+            }
+        }
+    }
 }

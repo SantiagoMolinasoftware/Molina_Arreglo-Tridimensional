@@ -5,13 +5,13 @@ int main()
     int filas, columnas, profundidad;
 
     // Solicitar al usuario el tamanio de los valores
-    printf("Ingrese el numero de filas: ");
+    printf("Ingrese la cantidad de dimension: ");
     scanf("%d", &filas);
 
     printf("Ingrese el numero de columnas: ");
     scanf("%d", &columnas);
 
-    printf("Ingrese la cantidad de dimension: ");
+    printf("Ingrese el numero de filas: ");
     scanf("%d", &profundidad);
 
     // Verificar que los valores ingresados sean correctos
@@ -42,4 +42,18 @@ int main()
             }
         }
     }
+    
+    // Imprimir el arreglo tridimensional
+    printf("\nArreglo tridimensional (%dx%dx%d):\n", filas, columnas, profundidad);
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            for (int k = 0; k < profundidad; k++) {
+                printf("%d ", arreglo[i][j][k]);
+            }
+            printf("\n");
+        }
+        printf("\n");
+    }
+
+    return 0;
 }

@@ -54,3 +54,33 @@ int main() {
 
     return 0;
 }
+
+// Función para ingresar datos de los alumnos
+void ingresarDatos(struct Alumno *alumnos, int n) {
+    for (int i = 0; i < n; i++) {
+        printf("\nIngrese los datos del alumno %d:\n", i + 1);
+
+        // Solicitar y almacenar la matricula
+        printf("Matricula: ");
+        scanf("%d", &alumnos[i].matricula);
+
+        // Solicitar y almacenar el nombre
+        printf("Nombre: ");
+        fflush(stdin);  // Limpiar el bufer de entrada antes de leer una cadena
+        gets(alumnos[i].nombre);
+
+        // Solicitar y almacenar la direccion
+        printf("Direccion: ");
+        fflush(stdin);
+        gets(alumnos[i].direccion);
+
+        // Solicitar y almacenar la carrera
+        printf("Carrera: ");
+        fflush(stdin);
+        gets(alumnos[i].carrera);
+
+        // Solicitar y almacenar el promedio
+        printf("Promedio: ");
+        scanf("%f", &alumnos[i].promedio);
+    }
+}

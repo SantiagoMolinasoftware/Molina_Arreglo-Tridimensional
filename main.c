@@ -44,7 +44,7 @@ int main() {
                 break;
 
             case 0:
-                printf("Saliendo del programa.\n");
+                printf("Saliendo del programa, hecho por Santiago Molina.\n");
                 break;
 
             default:

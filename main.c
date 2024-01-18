@@ -55,7 +55,7 @@ int main() {
     return 0;
 }
 
-// Función para ingresar datos de los alumnos
+// Funcion para ingresar datos de los alumnos
 void ingresarDatos(struct Alumno *alumnos, int n) {
     for (int i = 0; i < n; i++) {
         printf("\nIngrese los datos del alumno %d:\n", i + 1);
@@ -82,5 +82,20 @@ void ingresarDatos(struct Alumno *alumnos, int n) {
         // Solicitar y almacenar el promedio
         printf("Promedio: ");
         scanf("%f", &alumnos[i].promedio);
+    }
+}
+
+// Funcion para mostrar datos de los alumnos
+void mostrarDatos(struct Alumno *alumnos, int n) {
+    printf("\nDatos de los alumnos ingresados:\n");
+
+    // Iterar sobre cada alumno y mostrar sus datos
+    for (int i = 0; i < n; i++) {
+        printf("\nAlumno %d:\n", i + 1);
+        printf("Matricula: %d\n", alumnos[i].matricula);
+        printf("Nombre: %s\n", alumnos[i].nombre);
+        printf("Direccion: %s\n", alumnos[i].direccion);
+        printf("Carrera: %s\n", alumnos[i].carrera);
+        printf("Promedio: %.2f\n", alumnos[i].promedio);
     }
 }

@@ -8,3 +8,7 @@ struct Alumno {
     char carrera[50];
     float promedio;
 };
+
+// Prototipos de funciones
+void ingresarDatos(struct Alumno *alumnos, int n);
+void mostrarDatos(struct Alumno *alumnos, int n);
